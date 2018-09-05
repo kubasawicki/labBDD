@@ -21,7 +21,6 @@ public class OptimalItinerarySteps {
     @Gdy("^chcę podróżować z \"([^\"]*)\" do \"([^\"]*)\" o (.*)$")
     public void whenIWantToTravel(String departure, String destination,
             @Transform(JodaLocalTimeConverter.class) LocalTime startTime) {
-        throw new PendingException();
     }
 
     @Wtedy("^powinienem uzyskać informację o pociągach o:$")
@@ -30,6 +29,7 @@ public class OptimalItinerarySteps {
         arrivalTimes.add(new LocalTime("8:02"));
         arrivalTimes.add(new LocalTime("8:11"));
         arrivalTimes.add(new LocalTime("8:14"));
+        arrivalTimes.add(new LocalTime("8:21"));
         Assert.assertThat(expectedTrainTimes.size(), Matchers.equalTo(arrivalTimes.size()));
         Assert.assertThat(expectedTrainTimes, Matchers.equalTo(arrivalTimes));
     }
