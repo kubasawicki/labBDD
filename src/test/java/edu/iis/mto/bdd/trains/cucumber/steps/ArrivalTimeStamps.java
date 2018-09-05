@@ -26,7 +26,7 @@ public class ArrivalTimeSteps {
     }
 
     @Wtedy("^powinienem uzyskać następujący szacowany czas przyjazdu:(.*)$")
-    public void shouldBeInformedAbout(@Transform(JodaLocalTimeConverter.class) List<LocalTime> expectedTrainTimes) {
+    public void shouldBeInformedAbout(@Transform(JodaLocalTimeConverter.class) LocalTime optimalTime) {
         throw new PendingException();
     }
 }

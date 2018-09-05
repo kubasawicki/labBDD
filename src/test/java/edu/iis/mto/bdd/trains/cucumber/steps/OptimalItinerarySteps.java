@@ -12,7 +12,7 @@ import cucumber.api.java.pl.Zakładając;
 
 public class OptimalItinerarySteps {
 	
-	
+	List<LocalTime> arrivalTimes;
 
     @Zakładając("^pociągi linii \"(.*)\" z \"(.*)\" odjeżdżają ze stacji \"(.*)\" do \"(.*)\" o$")
     public void givenArrivingTrains(String line, String lineStart, String departure, String destination,
